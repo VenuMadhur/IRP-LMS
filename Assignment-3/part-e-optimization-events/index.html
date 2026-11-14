@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickCart - Performance and DOM Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>QuickCart</h1>
+      <p>Performance Optimization & DOM Events</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Product Search - Debouncing</h2>
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <p id="searchResult"></p>
+      </section>
+
+      <section>
+        <h2>Scroll Event - Throttling</h2>
+        <p>Scroll the page and check the browser console.</p>
+        <p id="scrollResult">Scroll event not triggered yet.</p>
+      </section>
+
+      <section>
+        <h2>Discount Calculation - Memoization</h2>
+        <button id="calculateButton">Calculate Discount</button>
+        <p>Check the browser console for cached results.</p>
+      </section>
+
+      <section>
+        <h2>Event Bubbling</h2>
+        <div id="bubbleContainer" class="demo-box">
+          <p>Parent container</p>
+          <button id="bubbleButton">Click to Show Bubbling</button>
+          <button id="stopButton">Stop Propagation</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Product List - Event Delegation</h2>
+        <div id="productList">
+          <div class="product">
+            <span>Laptop - ₹50,000</span>
+            <button class="removeButton">Remove</button>
+          </div>
+
+          <div class="product">
+            <span>Mouse - ₹800</span>
+            <button class="removeButton">Remove</button>
+          </div>
+
+          <div class="product">
+            <span>Keyboard - ₹1,500</span>
+            <button class="removeButton">Remove</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
