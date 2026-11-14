@@ -1,0 +1,529 @@
+/* GLOBAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #003366;
+  --orange: #fe781e;
+  --secondary: #5f9fe0;
+  --light-blue: #e2f2fd;
+  --white: #ffffff;
+  --border: #d6e9ff;
+  --text: #263445;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  min-height: 75px;
+  padding: 12px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--orange);
+}
+
+.sign-in {
+  padding: 9px 22px;
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  color: var(--primary);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.sign-in:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 480px;
+  padding: 60px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--light-blue);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content .tagline {
+  color: var(--orange);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  color: var(--primary);
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 520px;
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 13px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* LEARNING JOURNEY */
+
+.learning-journey {
+  padding: 65px 7%;
+  text-align: center;
+}
+
+.section-heading {
+  color: var(--primary);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.journey-card {
+  padding: 25px 18px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.journey-card h3 {
+  color: var(--primary);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.journey-card p {
+  font-size: 14px;
+  color: #586777;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 22px 7%;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 14px;
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 1024px) {
+  .journey-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+
+  .journey-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   8. SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .sign-in {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+  .section-heading {
+    font-size: 26px;
+  }
+
+  .journey-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COURSES PAGE */
+
+.courses-hero,
+.contact-hero {
+  min-height: 300px;
+  padding: 45px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background-color: var(--light-blue);
+}
+
+.courses-hero > div,
+.contact-hero > div {
+  flex: 1;
+}
+
+.courses-hero h1,
+.contact-hero h1 {
+  color: var(--primary);
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.courses-hero p:not(.tagline),
+.contact-hero p:not(.tagline) {
+  max-width: 550px;
+}
+
+.courses-hero img,
+.contact-hero img {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.courses-section {
+  padding: 60px 7%;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.course-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--white);
+  transition: 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
+}
+
+.course-card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.course-info {
+  padding: 18px;
+}
+
+.course-info h3 {
+  color: var(--primary);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.course-info p {
+  color: #586777;
+  font-size: 14px;
+}
+
+/* CONTACT PAGE */
+
+.contact-section {
+  padding: 60px 7%;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info,
+.contact-form-container {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.contact-info h3,
+.contact-form-container h3 {
+  color: var(--primary);
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-item h4 {
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.contact-item p {
+  color: #586777;
+  font-size: 15px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(95, 159, 224, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 13px 22px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary);
+}
+
+/* RESPONSIVE DESIGN - ALL PAGES */
+
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-hero,
+  .contact-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .courses-hero h1,
+  .contact-hero h1 {
+    font-size: 32px;
+  }
+
+  .courses-hero img,
+  .contact-hero img {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info,
+  .contact-form-container {
+    padding: 22px;
+  }
+}
