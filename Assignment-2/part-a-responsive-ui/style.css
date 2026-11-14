@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #003366;
+  --orange: #fe781e;
+  --secondary: #5f9fe0;
+  --background: #e2f2fd;
+  --white: #ffffff;
+  --border: #d6e9ff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*  NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 7%;
+  background-color: var(--white);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+.nav-links a.active {
+  color: var(--orange);
+}
+
+.nav-links a.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--orange);
+
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+
+.sign-in {
+  padding: 8px 20px;
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.sign-in:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* HERO SECTION */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 60px 7%;
+  background-color: var(--background);
+  min-height: 450px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.tagline {
+  color: var(--orange);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  color: var(--orange);
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.hero-btn {
+  display: inline-block;
+
+  background-color: var(--orange);
+  color: var(--white);
+
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.hero-btn:hover {
+  background-color: var(--primary);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* LEARNING JOURNEY */
+
+.learning-journey {
+  padding: 60px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: var(--secondary);
+}
+
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.journey-card {
+  padding: 20px;
+
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.journey-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--orange);
+  color: var(--white);
+
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 18px;
+
+  margin-bottom: 15px;
+}
+
+.journey-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.journey-card p {
+  font-size: 14px;
+  color: #586777;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--primary);
+  color: var(--white);
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 1024px) {
+  .journey-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+/*  MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image img {
+    max-width: 350px;
+  }
+
+  .journey-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-card {
+    width: 100%;
+  }
+}
