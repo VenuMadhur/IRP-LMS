@@ -1,7 +1,5 @@
 "use strict";
 
-// JSON Handling and Output-Based Debugging
-
 const order = {
   orderId: 501,
   customer: "Rahul",
@@ -13,13 +11,11 @@ const order = {
   },
 };
 
-// Convert JavaScript object into JSON string
 const jsonData = JSON.stringify(order);
 
 console.log("JSON String:");
 console.log(jsonData);
 
-// Convert JSON string back into JavaScript object
 const parsedOrder = JSON.parse(jsonData);
 
 console.log("Parsed Object:");

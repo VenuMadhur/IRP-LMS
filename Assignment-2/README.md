@@ -78,3 +78,13 @@ Assignment-2/
 ## Learning Outcome
 
 Through this assignment, I practiced building responsive web pages and improved my understanding of JavaScript fundamentals, variable behaviour, hoisting and asynchronous execution.
+
+## Live Demo
+
+**Deployed Website:** [View Responsive IRP LMS Home Page](https://irp-lms-assignment-2.netlify.app/)
+
+## GitHub Repository
+
+**Source Code:** [View GitHub Repository](https://github.com/VenuMadhur/IRP-LMS/tree/main/Assignment-2)
+
+**Note:** The JavaScript Bank Account Simulator (`bank.js`) is included in the repository and can be executed using Node.js.

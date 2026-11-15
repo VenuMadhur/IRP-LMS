@@ -173,3 +173,13 @@ I gained practical experience with object-oriented programming, array methods, d
 **Project:** Advanced JavaScript Practical Assignment  
 **Scenario:** QuickCart – E-commerce Order Management System  
 **Language:** JavaScript (ES6+)
+
+## Live Demo
+
+**Deployed Website:** [View QuickCart Demo](https://irp-lms-assignment-3.netlify.app/)
+
+## GitHub Repository
+
+**Source Code:** [View GitHub Repository](https://github.com/VenuMadhur/IRP-LMS/tree/main/Assignment-3)
+
+**Note:** The deployed website demonstrates Part E – Performance Optimization and DOM Events. The remaining JavaScript tasks are included in the repository and can be executed using Node.js.
